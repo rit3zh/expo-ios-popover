@@ -2,7 +2,7 @@
 
 A **native iOS Popover** for React Native + Expo.
 
----
+https://github.com/user-attachments/assets/1eedbd6b-1991-4588-862f-eb6e2175997d
 
 ## ⚡ Features
 
