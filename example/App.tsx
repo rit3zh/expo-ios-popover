@@ -33,8 +33,7 @@ const TravelHomeScreen: React.FC = () => {
     {
       id: "1",
       name: "France",
-      image:
-        "https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg",
+      image: "https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg",
     },
     {
       id: "2",
@@ -74,7 +73,6 @@ const TravelHomeScreen: React.FC = () => {
     >
       <SafeAreaView style={styles.container}>
         <StatusBar barStyle="light-content" />
-
         {/* Header */}
         <View style={styles.header}>
           <Text style={styles.logo}>Travel</Text>
@@ -93,112 +91,9 @@ const TravelHomeScreen: React.FC = () => {
           />
         </View>
 
-        {/* Recently Viewed - Horizontal Scroll */}
-        <View style={styles.recentSection}>
-          <Text style={styles.sectionTitle}>Recently Viewed</Text>
-          <View style={styles.recentRow}>
-            {recentPlaces.map((place) => (
-              <View key={place.id} style={styles.recentCard}>
-                <Popover
-                  id={`recent-place-${place.id}`}
-                  arrowEdge={place.arrowEdge}
-                >
-                  <Popover.Trigger>
-                    <Pressable>
-                      <Text style={styles.recentTitle}>{place.title}</Text>
-                      <Text style={styles.recentSubtitle}>
-                        {place.subtitle}
-                      </Text>
-                    </Pressable>
-                  </Popover.Trigger>
-
-                  <Popover.Content
-                    style={{
-                      width: 200,
-                      padding: 16,
-                      height: 200,
-                      borderRadius: 12,
-                      // backgroundColor: "#1c1c1e",
-                      flexDirection: "column",
-                      justifyContent: "flex-start",
-                      gap: 8,
-                    }}
-                  >
-                    <View
-                      style={{
-                        flexDirection: "row",
-                        alignItems: "center",
-                        gap: 10,
-                        marginTop: place.title === "Tokyo" ? 22 : 0,
-                      }}
-                    >
-                      <Text style={{ fontSize: 24 }}>
-                        {place.title === "Barcelona"
-                          ? "🇪🇸"
-                          : place.title === "Tokyo"
-                          ? "🇯🇵"
-                          : place.title === "Dubai"
-                          ? "🇦🇪"
-                          : "🌍"}
-                      </Text>
-                      <Text
-                        style={{
-                          fontSize: 16,
-                          fontWeight: "700",
-                          color: "#fff",
-                        }}
-                      >
-                        {place.title}
-                      </Text>
-                    </View>
-
-                    <Text
-                      style={{
-                        fontSize: 13,
-                        color: "rgba(255,255,255,0.7)",
-                        lineHeight: 18,
-                      }}
-                    >
-                      {place.title === "Barcelona" &&
-                        "A vibrant city known for Gaudí’s architecture, beaches, and lively culture."}
-                      {place.title === "Tokyo" &&
-                        "Japan’s bustling capital, blending ultramodern skyscrapers with historic temples."}
-                      {place.title === "Dubai" &&
-                        "Famous for luxury shopping, modern architecture, and a lively nightlife scene."}
-                    </Text>
-                  </Popover.Content>
-                </Popover>
-              </View>
-            ))}
-          </View>
-        </View>
-
-        {/* Quick Links */}
-        <View style={styles.quickLinks}>
-          <TouchableOpacity style={styles.linkButton}>
-            <Ionicons name="airplane-outline" size={18} color="#fff" />
-            <Text style={styles.linkText}>Flights</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.linkButton}>
-            <Ionicons name="bed-outline" size={18} color="#fff" />
-            <Text style={styles.linkText}>Hotels</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.linkButton}>
-            <Ionicons name="car-outline" size={18} color="#fff" />
-            <Text style={styles.linkText}>Cars</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.linkButton}>
-            <Ionicons name="restaurant-outline" size={18} color="#fff" />
-            <Text style={styles.linkText}>Food</Text>
-          </TouchableOpacity>
-        </View>
-
         {/* Special Offer Card */}
         <TouchableOpacity style={styles.offerCard} activeOpacity={0.8}>
-          <Popover id="free-bird-offer" arrowEdge="bottom">
+          <Popover arrowDirection={ArrowEdge.Top}>
             <Popover.Trigger>
               <View style={styles.offerContent}>
                 <View>
@@ -213,12 +108,8 @@ const TravelHomeScreen: React.FC = () => {
             </Popover.Trigger>
             <Popover.Content
               style={{
-                width: 320,
                 padding: 20,
-                height: 150,
                 borderRadius: 16,
-                flexDirection: "column",
-                justifyContent: "flex-start",
               }}
             >
               <View
@@ -250,7 +141,12 @@ const TravelHomeScreen: React.FC = () => {
                 }}
               >
                 For a limited time, save up to{" "}
-                <Text style={{ fontWeight: "700", color: "#4cd964" }}>50%</Text>{" "}
+                <Text
+                  style={{ fontWeight: "700", color: "#4cd964" }}
+                  onPress={() => alert("e")}
+                >
+                  50%
+                </Text>{" "}
                 on flights with Freebird. Book your getaway now and enjoy more
                 for less.
               </Text>
@@ -295,7 +191,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: 24,
-    paddingVertical: 16,
+    paddingVertical: 26,
     marginTop: 8,
   },
   logo: {

@@ -1,23 +1,22 @@
-import { requireNativeView } from "expo";
-import { ComponentType } from "react";
+import { requireNativeViewManager } from "expo-modules-core";
 import { Popover } from "../constants";
 
-export const PopoverNativeView: ComponentType<any> = requireNativeView(
+const NativePopoverView = requireNativeViewManager(
   Popover.Module,
-  Popover.View
+  "ExpoPopoverView"
+);
+const NativePopoverTrigger = requireNativeViewManager(
+  Popover.Module,
+  "ExpoPopoverTriggerView"
+);
+const NativePopoverContent = requireNativeViewManager(
+  Popover.Module,
+  "ExpoPopoverContentView"
 );
 
-export const PopoverNativeTriggerView: ComponentType<any> = requireNativeView(
-  Popover.Module,
-  Popover.Trigger
-);
 
-export const PopoverNativePressableView: ComponentType<any> = requireNativeView(
-  Popover.Module,
-  Popover.Pressable
-);
-
-export const PopoverNativeContentView: ComponentType<any> = requireNativeView(
-  Popover.Module,
-  Popover.Content
-);
+export {
+  NativePopoverView,
+  NativePopoverTrigger,
+  NativePopoverContent,
+}
