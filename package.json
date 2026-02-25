@@ -1,6 +1,6 @@
 {
   "name": "expo-ios-popover",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Native iOS Popover for React Native.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
