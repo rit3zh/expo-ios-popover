@@ -12,24 +12,28 @@ permissions:
 
 jobs:
   release:
+    name: 🚀 Semantic Release
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: 🔀 Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: false
 
-      - name: Setup Node.js
+      - name: 🟢 Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
 
-      - name: Install dependencies
+      - name: 📦 Install dependencies
         run: npm install
 
-      - name: Run semantic-release
+      - name: 📦 Install conventional-changelog preset
+        run: npm install conventional-changelog-conventionalcommits@7 -D
+
+      - name: 🚀 Run semantic-release
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
