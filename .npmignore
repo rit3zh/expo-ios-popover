@@ -8,6 +8,8 @@ __mocks__
 __tests__
 
 
+bun.lock
+CHANGELOG.md
 /src/
 /babel.config.js
 /android/src/androidTest/

@@ -15,6 +15,7 @@ import {
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { ArrowEdge, Popover } from "expo-ios-popover";
+import { SymbolView } from "expo-symbols";
 
 const { width, height } = Dimensions.get("window");
 
@@ -70,9 +71,13 @@ const TravelHomeScreen: React.FC = () => {
     <ScrollView
       contentInsetAdjustmentBehavior="always"
       showsVerticalScrollIndicator={false}
+      contentContainerStyle={{ flexGrow: 1, backgroundColor: "black" }}
+      style={{
+        backgroundColor: "black",
+      }}
     >
       <SafeAreaView style={styles.container}>
-        <StatusBar barStyle="light-content" />
+        <StatusBar barStyle="dark-content" />
         {/* Header */}
         <View style={styles.header}>
           <Text style={styles.logo}>Travel</Text>
@@ -83,7 +88,7 @@ const TravelHomeScreen: React.FC = () => {
 
         {/* Search */}
         <View style={styles.searchContainer}>
-          <Ionicons name="search" size={20} color="rgba(255,255,255,0.4)" />
+          <SymbolView name="magnifyingglass" tintColor={"gray"} size={20} />
           <TextInput
             style={styles.searchInput}
             placeholder="Where to?"

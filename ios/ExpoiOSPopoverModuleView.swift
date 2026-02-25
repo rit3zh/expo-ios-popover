@@ -5,6 +5,7 @@ import ExpoModulesCore
 public final class ExpoPopoverView: ExpoView {
     var arrowDirection: String = "any"
     
+    
     private var triggerView: ExpoPopoverTriggerView?
     private var contentView: ExpoPopoverContentView?
     private var tapGesture: UITapGestureRecognizer?
@@ -292,8 +293,17 @@ final class PopoverController: UIViewController, UIPopoverPresentationController
         }
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presentingViewController?.view.tintAdjustmentMode = .normal
+    }
+    
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        
+        presentingViewController?.view.tintAdjustmentMode = .automatic
         
         if isBeingDismissed {
             onDismiss?()
