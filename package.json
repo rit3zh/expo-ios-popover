@@ -29,7 +29,6 @@
   "author": "Ritesh. <119659853+rit3zh@users.noreply.github.com> (https://github.com/rit3zh)",
   "license": "MIT",
   "homepage": "https://github.com/rit3zh/expo-ios-popover#readme",
-  "dependencies": {},
   "devDependencies": {
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/commit-analyzer": "11.1.0",
@@ -38,7 +37,7 @@
     "@semantic-release/npm": "12.0.1",
     "@semantic-release/release-notes-generator": "12.1.0",
     "@types/react": "~19.1.0",
-    "conventional-changelog-conventionalcommits": "^9.1.0",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
     "expo": "^54.0.10",
     "expo-module-scripts": "^5.0.7",
     "react-native": "0.81.4",
