@@ -1,3 +1,12 @@
+## [1.2.0](https://github.com/rit3zh/expo-ios-popover/compare/v1.1.0...v1.2.0) (2026-03-05)
+
+
+### ✨ Features
+
+* add compound component API with Root, Trigger, Content, and Pressable ([905cbe6](https://github.com/rit3zh/expo-ios-popover/commit/905cbe69768c14f03cf3dce51744f779b0f007d4))
+* add Pressable native view with onTap, onTapIn, onTapOut events ([ea5a3b9](https://github.com/rit3zh/expo-ios-popover/commit/ea5a3b9c33e1442f937816375010469bb7d20ffa))
+* add TriggerType enum, IPopoverPressable, and compound component typings ([7c52aa9](https://github.com/rit3zh/expo-ios-popover/commit/7c52aa984c64d7d8e28dc2faacfda9b714b98888))
+
 ## [1.1.0](https://github.com/rit3zh/expo-ios-popover/compare/v1.0.0...v1.1.0) (2026-02-25)
 
 
