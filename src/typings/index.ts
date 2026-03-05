@@ -1,5 +1,6 @@
-import type { FC, ReactNode } from "react";
+import type { FC, PropsWithChildren, ReactNode } from "react";
 import type { StyleProp, ViewStyle } from "react-native";
+import type { TCompoundComponent } from "./compound";
 
 enum ArrowEdge {
   Top = "down",
@@ -10,33 +11,50 @@ enum ArrowEdge {
   None = "none",
 }
 
-interface PopoverProps {
-  children: ReactNode;
-  arrowDirection?: ArrowEdge;
-  onOpenChange?: (isOpen: boolean) => void;
+enum TriggerType {
+  Tap = "tap",
+  LongPress = "longpress",
+  DoubleTap = "doubletap",
 }
 
-interface PopoverTriggerProps {
+interface IPopover {
   children: ReactNode;
+  direction?: ArrowEdge;
+  onVisibilityChange?: <T extends boolean>(visible: T) => void;
+  trigger?: TriggerType;
+  animated?: boolean;
+}
+
+interface IPopoverTrigger {
+  children?: ReactNode;
   style?: StyleProp<ViewStyle>;
 }
 
-interface PopoverComponent extends FC<PopoverProps> {
-  Trigger: FC<PopoverTriggerProps>;
-  Content: FC<PopoverContentProps>;
+interface IPopoverPressable {
+  children?: ReactNode;
+  style?: StyleProp<ViewStyle>;
+  onPress?: () => void;
 }
 
-interface PopoverContentProps {
-  children: ReactNode;
+interface IPopoverContent {
+  children?: ReactNode;
   style?: StyleProp<ViewStyle>;
   onDismiss?: () => void;
 }
 
-export {
-  PopoverProps,
-  PopoverTriggerProps,
-  PopoverContentProps,
-  PopoverComponent,
+type TPopoverComponent = TCompoundComponent<
+  IPopover,
+  FC<PropsWithChildren<Partial<IPopoverTrigger>>>,
+  FC<PropsWithChildren<Partial<IPopoverContent>>>,
+  FC<PropsWithChildren<Partial<IPopoverPressable>>>
+>;
+
+export type {
+  IPopover,
+  IPopoverTrigger,
+  IPopoverContent,
+  IPopoverPressable,
+  TPopoverComponent,
 };
 
-export { ArrowEdge };
+export { ArrowEdge, TriggerType };
