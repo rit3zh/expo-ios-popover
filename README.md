@@ -2,7 +2,8 @@
 
 A native iOS popover component for React Native + Expo — built on `UIPopoverPresentationController` for that authentic platform feel.
 
-https://github.com/user-attachments/assets/1eedbd6b-1991-4588-862f-eb6e2175997d
+https://github.com/user-attachments/assets/f005323c-eef0-42d8-8431-ec5056044452
+
 
 ## Features
 
