@@ -1,29 +1,19 @@
-import { NativeTabs } from "expo-router/unstable-native-tabs";
-import { Appearance } from "react-native";
+import { View, Text } from "react-native";
+import React from "react";
+import { Stack } from "expo-router";
 
-Appearance.setColorScheme("dark");
-
-export default function Layout() {
+export default function RootLayout() {
   return (
-    <NativeTabs tintColor={"orange"}>
-      <NativeTabs.Trigger
-        name="index"
-        options={{
-          title: "Home",
-          icon: {
-            sf: "house",
-          },
-        }}
-      />
-      <NativeTabs.Trigger
-        name="settings"
-        options={{
-          title: "Settings",
-          icon: {
-            sf: "gear",
-          },
-        }}
-      />
-    </NativeTabs>
+    <Stack
+      screenOptions={{
+        headerShown: true,
+        title: "Travel",
+        headerTransparent: true,
+        headerLargeTitleEnabled: false,
+        headerTintColor: "white",
+      }}
+    >
+      <Stack.Screen name="(tabs)" />
+    </Stack>
   );
 }
