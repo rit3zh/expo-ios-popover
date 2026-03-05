@@ -1,4 +1,3 @@
-// Reexport the native module. On web, it will be resolved to ExpoiOSPopoverModule.web.ts
-// and on native platforms to ExpoiOSPopoverModule.ts
-export * from "./view/Popover";
+export { Popover } from "./view";
+export { RootPopover as Root, Trigger, Content, Pressable } from "./view";
 export * from "./typings";
