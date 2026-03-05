@@ -13,10 +13,14 @@ const NativePopoverContent = requireNativeViewManager(
   Popover.Module,
   "ExpoPopoverContentView"
 );
-
+const NativePopoverPressable = requireNativeViewManager(
+  Popover.Module,
+  "ExpoPopoverPressableView"
+);
 
 export {
   NativePopoverView,
   NativePopoverTrigger,
   NativePopoverContent,
+  NativePopoverPressable,
 }
