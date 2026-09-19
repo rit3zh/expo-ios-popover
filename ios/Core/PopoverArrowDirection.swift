@@ -1,5 +1,6 @@
 import UIKit
 
+/// Which way the popover's arrow may point. Mirrors the values of `ArrowEdge` in JS.
 enum PopoverArrowDirection: String, CaseIterable {
     case up = "up"
     case down = "down"
@@ -8,6 +9,7 @@ enum PopoverArrowDirection: String, CaseIterable {
     case none = "none"
     case any = "any"
 
+    /// Parses the value sent from JS, falling back to `.any` when it is missing or unknown.
     init(_ value: String?) {
         self = PopoverArrowDirection(rawValue: value?.lowercased() ?? "") ?? .any
     }
