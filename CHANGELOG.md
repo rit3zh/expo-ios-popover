@@ -1,3 +1,14 @@
+## [1.3.0](https://github.com/rit3zh/expo-ios-popover/compare/v1.2.0...v1.3.0) (2026-09-19)
+
+
+### ✨ Features
+
+* add blur and iOS 26 Liquid Glass backgrounds ([86ac607](https://github.com/rit3zh/expo-ios-popover/commit/86ac6071273798b8a8d23abdc79c3bb51248db5d))
+* add custom spring and timing animations ([5eef37c](https://github.com/rit3zh/expo-ios-popover/commit/5eef37c113e18021a28eb3d23e6d528c398e5398))
+* add dismissOnPress to Popover.Pressable ([6c6527b](https://github.com/rit3zh/expo-ios-popover/commit/6c6527b24b2de3b595a93e2a9e8b619a85b9e1a2))
+* add matched transition that morphs the trigger into a sheet on iOS 18+ ([6652c00](https://github.com/rit3zh/expo-ios-popover/commit/6652c00523c2b920d8e7c48dcf9bf03c3bfc2c29))
+* add sheet options for detents, grabber, corner radius and dimming ([88c27cf](https://github.com/rit3zh/expo-ios-popover/commit/88c27cfb304b2015ecd9a45fbd169be9b25b6580))
+
 ## [1.2.0](https://github.com/rit3zh/expo-ios-popover/compare/v1.1.0...v1.2.0) (2026-03-05)
 
 
