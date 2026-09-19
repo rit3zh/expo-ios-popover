@@ -1,41 +1,33 @@
 import { NativeTabs } from "expo-router/unstable-native-tabs";
 import { Appearance } from "react-native";
+import { INVOICE_COLORS } from "../../constants";
 
-Appearance.setColorScheme("dark");
+Appearance.setColorScheme("light");
 
 export default function Layout() {
   return (
-    <NativeTabs tintColor={"orange"} minimizeBehavior="onScrollDown">
+    <NativeTabs tintColor={INVOICE_COLORS.text} minimizeBehavior="onScrollDown">
       <NativeTabs.Trigger
         name="index"
         options={{
-          title: "Home",
+          title: "Grid",
           icon: {
-            sf: "house",
+            sf: "square.grid.2x2",
           },
           selectedIcon: {
-            sf: "house.fill",
+            sf: "square.grid.2x2.fill",
           },
         }}
       />
       <NativeTabs.Trigger
-        name="explore"
+        name="list"
         options={{
-          title: "Explore",
+          title: "List",
           icon: {
-            sf: "square.stack",
+            sf: "rectangle.grid.1x2",
           },
           selectedIcon: {
-            sf: "square.stack.fill",
-          },
-        }}
-      />
-      <NativeTabs.Trigger
-        name="settings"
-        options={{
-          title: "Settings",
-          icon: {
-            sf: "gear",
+            sf: "rectangle.grid.1x2.fill",
           },
         }}
       />
