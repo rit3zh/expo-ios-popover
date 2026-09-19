@@ -1,21 +1,21 @@
 import { requireNativeViewManager } from "expo-modules-core";
-import { Popover } from "../constants";
+import { NativeView } from "../constants";
 
 const NativePopoverView = requireNativeViewManager(
-  Popover.Module,
-  "ExpoPopoverView"
+  NativeView.Module,
+  NativeView.Root,
 );
 const NativePopoverTrigger = requireNativeViewManager(
-  Popover.Module,
-  "ExpoPopoverTriggerView"
+  NativeView.Module,
+  NativeView.Trigger,
 );
 const NativePopoverContent = requireNativeViewManager(
-  Popover.Module,
-  "ExpoPopoverContentView"
+  NativeView.Module,
+  NativeView.Content,
 );
 const NativePopoverPressable = requireNativeViewManager(
-  Popover.Module,
-  "ExpoPopoverPressableView"
+  NativeView.Module,
+  NativeView.Pressable,
 );
 
 export {
@@ -23,4 +23,4 @@ export {
   NativePopoverTrigger,
   NativePopoverContent,
   NativePopoverPressable,
-}
+};

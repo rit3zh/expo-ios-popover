@@ -1,3 +1,10 @@
-export { Popover } from "./view";
-export { RootPopover as Root, Trigger, Content, Pressable } from "./view";
-export * from "./typings";
+export {
+  Popover,
+  PopoverContent as Content,
+  PopoverPressable as Pressable,
+  PopoverRoot as Root,
+  PopoverTrigger as Trigger,
+} from "./components";
+
+export * from "./enums";
+export * from "./interfaces";
